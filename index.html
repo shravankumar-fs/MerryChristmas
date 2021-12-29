@@ -31,6 +31,31 @@
           transform: scale(1.3);
         }
       }
+      .credits {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        padding: 10px 20px;
+        background: linear-gradient(
+          hsla(200, 71%, 73%, 0.5) 70%,
+          hsla(200, 71%, 50%, 0.5)
+        );
+        border-radius: 30%;
+        border: none;
+        border-bottom: 5px solid hsla(200, 71%, 30%, 0.5);
+        color: hsla(200, 71%, 10%, 0.6);
+        text-shadow: 0px 2px 2px hsla(200, 71%, 10%, 0.3);
+        cursor: pointer;
+      }
+      .credits:active,
+      .credits:hover {
+        transform: translate(-50%, 0%) scale(0.98);
+        background-color: linear-gradient(
+          hsla(200, 71%, 73%, 1) 70%,
+          hsla(200, 71%, 50%, 1)
+        );
+      }
     </style>
   </head>
 
@@ -38,5 +63,6 @@
     <audio src="music.mp3" id="audio"></audio>
     <script type="module" src="bundle.js"></script>
     <div class="info">Loading...</div>
+    <button class="credits" id="credits">Credits :)</button>
   </body>
 </html>
